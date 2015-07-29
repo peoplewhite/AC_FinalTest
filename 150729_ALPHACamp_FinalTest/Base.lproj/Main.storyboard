@@ -34,9 +34,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card back" translatesAutoresizingMaskIntoConstraints="NO" id="MK4-rh-p9m">
                                 <rect key="frame" x="201" y="86" width="74" height="102"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card back" translatesAutoresizingMaskIntoConstraints="NO" id="gAm-eh-5yz">
-                                <rect key="frame" x="211" y="96" width="74" height="102"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card back" translatesAutoresizingMaskIntoConstraints="NO" id="mnx-ju-qx1">
                                 <rect key="frame" x="221" y="106" width="74" height="102"/>
                             </imageView>
@@ -45,7 +42,13 @@
                                 <state key="normal" title="Button" image="card back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnPickCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AGr-6i-qH3"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card back" translatesAutoresizingMaskIntoConstraints="NO" id="gAm-eh-5yz">
+                                <rect key="frame" x="215" y="97" width="74" height="102"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -56,6 +59,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imgCard4Animation" destination="gAm-eh-5yz" id="EdP-NQ-C4c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

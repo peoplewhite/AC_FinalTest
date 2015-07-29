@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import <Parse/Parse.h>
-
+#import <QuartzCore/QuartzCore.h>
 @interface ViewController ()
 @property NSMutableArray *arrRandomNumber;
 @property NSMutableArray *arrCardData;
@@ -75,7 +75,20 @@
     }
     
     
+
     
+}
+- (IBAction)btnPickCard:(id)sender {
+    [UIView animateWithDuration:2 animations:^{
+        _imgCard4Animation.frame = CGRectMake(57, 253,
+                                              _imgCard4Animation.frame.size.width * 2,
+                                              _imgCard4Animation.frame.size.height * 2);
+        
+    } completion:^(BOOL finished) {
+//        [UIView animateWithDuration:2 animations:^{
+//            _imgView.frame = CGRectMake(0, _imgView.center.y, 58, 68);
+//        }];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
