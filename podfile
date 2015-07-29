@@ -4,6 +4,7 @@
 target '150729_ALPHACamp_FinalTest' do
   pod "Parse"
 
+  pod "SVProgressHUD"
 end
 
 target '150729_ALPHACamp_FinalTestTests' do
