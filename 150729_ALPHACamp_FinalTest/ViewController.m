@@ -136,11 +136,16 @@
     
     [view.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
 }
+
+
 - (IBAction)btnAddFavorite:(id)sender {
     SingletonObject *singletonObj = [SingletonObject sharedInstance];
     int numCurrentCardNumber = [kCurrentCardNumber intValue];
     [singletonObj.arrMyFavoriteCards addObject:_arrCardData[numCurrentCardNumber]];
 }
+
+
+
 - (IBAction)btnBuildCards:(id)sender {
     [SVProgressHUD show];
     
@@ -151,19 +156,27 @@
             if (!error) {
                 for (PFObject *object in objects) {
                     
-                    NSDictionary *dictTemp = @{
-                                               @"nickname":object[@"nickname"],
-                                               @"description":object[@"description"],
-                                               @"email":object[@"email"],
-                                               };
-                    
-                    [_arrCardData addObject:dictTemp];
-                    
-                    
-                    if (i == 9) {
-                        [SVProgressHUD dismiss];
-                        _buttonCard.hidden = NO;
-                    }
+                    PFFile *userImageFile = object[@"avatar"];
+                    [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+                        if (!error) {
+                            UIImage *image = [UIImage imageWithData:imageData];
+                            SingletonObject *singleObj = [SingletonObject sharedInstance];
+                            [singleObj.arrImageAvatar addObject:image];
+                            NSDictionary *dictTemp = @{
+                                                       @"nickname":object[@"nickname"],
+                                                       @"description":object[@"description"],
+                                                       @"email":object[@"email"],
+                                                       @"avatar":image
+                                                       };
+                            
+                            [_arrCardData addObject:dictTemp];
+                            
+                            if (i == 9) {
+                                [SVProgressHUD dismiss];
+                                _buttonCard.hidden = NO;
+                            }
+                        }
+                    }];
                 }
             } else {
                 NSLog(@"Error: %@ %@", error, [error userInfo]);

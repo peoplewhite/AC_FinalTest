@@ -12,6 +12,7 @@
 
 @property NSMutableArray *arrMyFavoriteCards;
 @property NSString *strCurrentCardNickname;
+@property NSMutableArray *arrImageAvatar;
 
 + (id)sharedInstance;
 

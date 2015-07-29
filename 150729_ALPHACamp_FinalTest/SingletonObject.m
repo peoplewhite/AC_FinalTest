@@ -28,6 +28,7 @@
     if (self) {
         _arrMyFavoriteCards = [[NSMutableArray alloc]init];
         _strCurrentCardNickname = @"";
+        _arrImageAvatar = [[NSMutableArray alloc]init];
     }
     return self;
 }
