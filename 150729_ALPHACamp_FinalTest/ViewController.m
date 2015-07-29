@@ -19,6 +19,8 @@
 @property NSMutableArray *arrRandomNumber;
 @property NSMutableArray *arrCardData;
 @property NSMutableArray *arrPickCardNumber;//儲存已經抽過的卡片號碼
+@property BOOL isCardCreated;//從parse將卡片抓下來了嗎？
+
 
 @end
 
@@ -30,42 +32,50 @@
     _arrCardData     = [[NSMutableArray alloc]init];
     _arrRandomNumber = [[NSMutableArray alloc]init];
     _arrPickCardNumber = [[NSMutableArray alloc]init];
+    _isCardCreated = NO;
     
     
     
     //從15個數字，亂數取出10個數字
-    
-    
 //    BOOL isFindUnRepeatNum = NO;
 //    for (int i = 0; i < 10; i++) {
-//        while (!isFindUnRepeatNum) {
+//        isFindUnRepeatNum = NO;
+//        
+//        while (YES) {
+//            
 //            int ran = (arc4random() % 15) + 1;
-////            for (int j = 0; j < _arrRandomNumber.count; j++) {
-//            for (NSString *strNumberInArr in _arrRandomNumber) {
-//                if (ran == [strNumberInArr intValue]) {
-//                    //數字重複
-//                    continue;
+//            
+//            
+//            int numCount = 0;
+//            for (int j=0; j<_arrRandomNumber.count; j++) {
+//                
+//                if (ran != [_arrRandomNumber[j] intValue]) {
+//                    //repeat
+//                    numCount = 0;
+//                    break;
+//                }
+//                else {
+//                    //non-repeat
+//                    numCount++;
 //                }
 //            }
-//            [_arrRandomNumber addObject:[NSString stringWithFormat:@"%d", ran]];
-//            break;
+//            
+//            
+//            if (numCount == _arrRandomNumber.count) {
+//                [_arrRandomNumber addObject:[NSString stringWithFormat:@"%d", ran]];
+//                break;
+//            }
+//            
 //        }
 //    }
+//    NSLog(@"%@", _arrRandomNumber);
     
     
     
+    //亂數還沒做出來的備案
     for (int i = 0 ; i < 10 ; i++) {
        [_arrRandomNumber addObject:@(i)];
     }
-    
-    
-    
-    
-
-    
-    
-
-    
 }
 
 - (IBAction)btnPickCard:(id)sender {
@@ -90,8 +100,8 @@
     nibCard.frame = CGRectMake(
     57,
     253,
-    _imgCard4Animation.frame.size.width * 2,
-    _imgCard4Animation.frame.size.height * 2);
+    300,
+    300);
     
     [self.view addSubview:nibCard];
 
@@ -152,6 +162,7 @@
                     
                     if (i == 9) {
                         [SVProgressHUD dismiss];
+                        _buttonCard.hidden = NO;
                     }
                 }
             } else {

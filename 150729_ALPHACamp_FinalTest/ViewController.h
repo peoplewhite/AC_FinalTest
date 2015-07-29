@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imgCard4Animation;
 
+@property (weak, nonatomic) IBOutlet UIButton *buttonCard;
 
 @end
 
