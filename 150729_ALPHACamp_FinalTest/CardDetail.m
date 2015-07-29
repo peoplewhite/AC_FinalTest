@@ -21,11 +21,11 @@
             _labShowNickname.text = singletonObj.arrMyFavoriteCards[i][@"nickname"];
             _labShowDescription.text = singletonObj.arrMyFavoriteCards[i][@"description"];
             [_buttonShowEmail setTitle:singletonObj.arrMyFavoriteCards[i][@"email"] forState:UIControlStateNormal];
+            _imgAvatar.image = singletonObj.arrMyFavoriteCards[i][@"avatar"];
         }
     }
 }
 - (IBAction)btnSendEmail:(id)sender {
-    
     NSString *strTO = @"";
     NSString *strSubject = @"";
     NSString *strMail = [NSString stringWithFormat:@"mailto:%@?subject=%@", strTO, strSubject];
