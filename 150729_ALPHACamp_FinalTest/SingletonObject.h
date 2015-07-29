@@ -11,6 +11,7 @@
 @interface SingletonObject : NSObject
 
 @property NSMutableArray *arrMyFavoriteCards;
+@property NSString *strCurrentCardNickname;
 
 + (id)sharedInstance;
 

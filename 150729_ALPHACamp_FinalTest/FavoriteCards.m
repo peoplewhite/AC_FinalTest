@@ -33,5 +33,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
+    
+    SingletonObject *singletonObj = [SingletonObject sharedInstance];
+    
+    singletonObj.strCurrentCardNickname = singletonObj.arrMyFavoriteCards[indexPath.row][@"nickname"];
+    
+    [self performSegueWithIdentifier:@"showCardDetail" sender:self];
+
 }
 @end

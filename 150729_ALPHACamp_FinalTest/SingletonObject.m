@@ -27,6 +27,7 @@
     
     if (self) {
         _arrMyFavoriteCards = [[NSMutableArray alloc]init];
+        _strCurrentCardNickname = @"";
     }
     return self;
 }

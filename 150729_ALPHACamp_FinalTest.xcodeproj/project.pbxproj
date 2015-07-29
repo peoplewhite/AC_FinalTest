@@ -19,6 +19,7 @@
 		4F7BAAC41B68CCBB00F2F377 /* GV.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7BAAC31B68CCBB00F2F377 /* GV.m */; };
 		4F7BAAC71B68D31B00F2F377 /* SingletonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7BAAC61B68D31B00F2F377 /* SingletonObject.m */; };
 		4F7BAACA1B68D57F00F2F377 /* FavoriteCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7BAAC91B68D57F00F2F377 /* FavoriteCards.m */; };
+		4F7BAACD1B68DA1100F2F377 /* CardDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7BAACC1B68DA1100F2F377 /* CardDetail.m */; };
 		F7AA7D1EDBBC0ECF221C2A7B /* libPods-150729_ALPHACamp_FinalTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DDDC8332099AC623DEA05C /* libPods-150729_ALPHACamp_FinalTest.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,8 @@
 		4F7BAAC61B68D31B00F2F377 /* SingletonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonObject.m; sourceTree = "<group>"; };
 		4F7BAAC81B68D57F00F2F377 /* FavoriteCards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteCards.h; sourceTree = "<group>"; };
 		4F7BAAC91B68D57F00F2F377 /* FavoriteCards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteCards.m; sourceTree = "<group>"; };
+		4F7BAACB1B68DA1100F2F377 /* CardDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDetail.h; sourceTree = "<group>"; };
+		4F7BAACC1B68DA1100F2F377 /* CardDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDetail.m; sourceTree = "<group>"; };
 		977774CDE94AF165998BC616 /* Pods-150729_ALPHACamp_FinalTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-150729_ALPHACamp_FinalTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-150729_ALPHACamp_FinalTest/Pods-150729_ALPHACamp_FinalTest.debug.xcconfig"; sourceTree = "<group>"; };
 		CAE0A543815E37A434043902 /* Pods-150729_ALPHACamp_FinalTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-150729_ALPHACamp_FinalTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-150729_ALPHACamp_FinalTest/Pods-150729_ALPHACamp_FinalTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +109,8 @@
 				4F3C96281B68B30000BFCD70 /* AppDelegate.m */,
 				4F3C962A1B68B30000BFCD70 /* ViewController.h */,
 				4F3C962B1B68B30000BFCD70 /* ViewController.m */,
+				4F7BAACB1B68DA1100F2F377 /* CardDetail.h */,
+				4F7BAACC1B68DA1100F2F377 /* CardDetail.m */,
 				4F7BAAC81B68D57F00F2F377 /* FavoriteCards.h */,
 				4F7BAAC91B68D57F00F2F377 /* FavoriteCards.m */,
 				4F7BAAC51B68D31B00F2F377 /* SingletonObject.h */,
@@ -306,6 +311,7 @@
 				4F3C962C1B68B30000BFCD70 /* ViewController.m in Sources */,
 				4F7BAAC41B68CCBB00F2F377 /* GV.m in Sources */,
 				4F3C96291B68B30000BFCD70 /* AppDelegate.m in Sources */,
+				4F7BAACD1B68DA1100F2F377 /* CardDetail.m in Sources */,
 				4F7BAAC11B68CC0E00F2F377 /* cardView.m in Sources */,
 				4F7BAACA1B68D57F00F2F377 /* FavoriteCards.m in Sources */,
 				4F3C96261B68B30000BFCD70 /* main.m in Sources */,
