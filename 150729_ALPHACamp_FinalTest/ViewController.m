@@ -47,7 +47,6 @@
     
     
     for (int i = 0 ; i < 10 ; i++) {
-//       [_arrRandomNumber addObject:[NSString stringWithFormat:@"%d", i]];
        [_arrRandomNumber addObject:@(i)];
     }
     
@@ -68,10 +67,8 @@
                                                };
                     
                     [_arrCardData addObject:dictTemp];
-    NSLog(@"%@", _arrCardData);
                 }
             } else {
-                // Log details of the failure
                 NSLog(@"Error: %@ %@", error, [error userInfo]);
             }
         }];
