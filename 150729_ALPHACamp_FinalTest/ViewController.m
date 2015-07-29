@@ -11,6 +11,7 @@
 
 @interface ViewController ()
 @property NSMutableArray *arrRandomNumber;
+@property NSMutableArray *arrCardData;
 
 @end
 
@@ -19,10 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _arrCardData     = [[NSMutableArray alloc]init];
+    _arrRandomNumber = [[NSMutableArray alloc]init];
+    
+    
     
     //從15個數字，亂數取出10個數字
     
-    _arrRandomNumber = [[NSMutableArray alloc]init];
+    
 //    BOOL isFindUnRepeatNum = NO;
 //    for (int i = 0; i < 10; i++) {
 //        while (!isFindUnRepeatNum) {
@@ -46,7 +51,6 @@
        [_arrRandomNumber addObject:@(i)];
     }
     
-    NSLog(@"%@", _arrRandomNumber);
     
     
     
@@ -57,10 +61,14 @@
             if (!error) {
                 for (PFObject *object in objects) {
                     
-                    NSLog(@"%@", object[@"nickname"]);
-//                    NSLog(@"%@", object[@"description"]);
-//                    NSLog(@"%@", object[@"email"]);
+                    NSDictionary *dictTemp = @{
+                                               @"nickname":object[@"nickname"],
+                                               @"description":object[@"description"],
+                                               @"email":object[@"email"],
+                                               };
                     
+                    [_arrCardData addObject:dictTemp];
+    NSLog(@"%@", _arrCardData);
                 }
             } else {
                 // Log details of the failure
@@ -68,6 +76,9 @@
             }
         }];
     }
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
