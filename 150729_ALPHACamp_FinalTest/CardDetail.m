@@ -26,6 +26,10 @@
 }
 - (IBAction)btnSendEmail:(id)sender {
     
+    NSString *strTO = @"";
+    NSString *strSubject = @"";
+    NSString *strMail = [NSString stringWithFormat:@"mailto:%@?subject=%@", strTO, strSubject];
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:strMail]];
 }
 
 @end
