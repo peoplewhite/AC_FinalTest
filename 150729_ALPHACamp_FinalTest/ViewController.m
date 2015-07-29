@@ -140,5 +140,13 @@
     
     [view.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
 }
+- (IBAction)btnAddFavorite:(id)sender {
+    
+    
+    
+    
+    
+    
+}
 
 @end
