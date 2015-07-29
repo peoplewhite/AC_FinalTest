@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-150729_ALPHACamp_FinalTest-SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-150729_ALPHACamp_FinalTest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>23BAC6DAD91BE2DBD11BE373</key>
+		<key>71FD4AA107CD21E335EBB4A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>37C3CB3C0537731D33B94A86</key>
+		<key>82734F18CA50CC1BB8A383F0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C0F1BA7256018AFC7933746B</key>
+		<key>9097BD75C3910187BE3C1AF2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD4EECF4EFCD5A92351D14E6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -11,6 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "GV.h"
 #import "SingletonObject.h"
+#import "SVProgressHUD.h"
 
 
 
@@ -60,26 +61,7 @@
     
     
     
-    for (int i=0; i < 10; i++) {
-        PFQuery *query = [PFQuery queryWithClassName:@"Card"];
-        [query whereKey:@"CardId" equalTo:_arrRandomNumber[i]];
-        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            if (!error) {
-                for (PFObject *object in objects) {
-                    
-                    NSDictionary *dictTemp = @{
-                                               @"nickname":object[@"nickname"],
-                                               @"description":object[@"description"],
-                                               @"email":object[@"email"],
-                                               };
-                    
-                    [_arrCardData addObject:dictTemp];
-                }
-            } else {
-                NSLog(@"Error: %@ %@", error, [error userInfo]);
-            }
-        }];
-    }
+
     
     
 
@@ -145,13 +127,38 @@
     [view.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
 }
 - (IBAction)btnAddFavorite:(id)sender {
-
     SingletonObject *singletonObj = [SingletonObject sharedInstance];
     int numCurrentCardNumber = [kCurrentCardNumber intValue];
     [singletonObj.arrMyFavoriteCards addObject:_arrCardData[numCurrentCardNumber]];
+}
+- (IBAction)btnBuildCards:(id)sender {
+    [SVProgressHUD show];
     
-    
-    NSLog(@"%@", singletonObj.arrMyFavoriteCards);
+    for (int i=0; i < 10; i++) {
+        PFQuery *query = [PFQuery queryWithClassName:@"Card"];
+        [query whereKey:@"CardId" equalTo:_arrRandomNumber[i]];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                for (PFObject *object in objects) {
+                    
+                    NSDictionary *dictTemp = @{
+                                               @"nickname":object[@"nickname"],
+                                               @"description":object[@"description"],
+                                               @"email":object[@"email"],
+                                               };
+                    
+                    [_arrCardData addObject:dictTemp];
+                    
+                    
+                    if (i == 9) {
+                        [SVProgressHUD dismiss];
+                    }
+                }
+            } else {
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
+        }];
+    }
 }
 
 @end

@@ -21,6 +21,9 @@
                                 <state key="normal" title="建立牌組">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnBuildCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rRE-d7-ThU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldi-Dq-RFq">
                                 <rect key="frame" x="35" y="122" width="90" height="30"/>
