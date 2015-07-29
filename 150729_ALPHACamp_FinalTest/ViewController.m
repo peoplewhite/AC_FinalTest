@@ -10,6 +10,10 @@
 #import <Parse/Parse.h>
 #import <QuartzCore/QuartzCore.h>
 #import "GV.h"
+#import "SingletonObject.h"
+
+
+
 @interface ViewController ()
 @property NSMutableArray *arrRandomNumber;
 @property NSMutableArray *arrCardData;
@@ -141,12 +145,13 @@
     [view.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
 }
 - (IBAction)btnAddFavorite:(id)sender {
+
+    SingletonObject *singletonObj = [SingletonObject sharedInstance];
+    int numCurrentCardNumber = [kCurrentCardNumber intValue];
+    [singletonObj.arrMyFavoriteCards addObject:_arrCardData[numCurrentCardNumber]];
     
     
-    
-    
-    
-    
+    NSLog(@"%@", singletonObj.arrMyFavoriteCards);
 }
 
 @end
