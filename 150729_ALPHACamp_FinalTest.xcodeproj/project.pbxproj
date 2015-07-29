@@ -20,6 +20,8 @@
 		4F7BAAC71B68D31B00F2F377 /* SingletonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7BAAC61B68D31B00F2F377 /* SingletonObject.m */; };
 		4F7BAACA1B68D57F00F2F377 /* FavoriteCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7BAAC91B68D57F00F2F377 /* FavoriteCards.m */; };
 		4F7BAACD1B68DA1100F2F377 /* CardDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7BAACC1B68DA1100F2F377 /* CardDetail.m */; };
+		4F7BAAD41B69194900F2F377 /* FavoriteCardsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F7BAAD31B69194900F2F377 /* FavoriteCardsCell.xib */; };
+		4F7BAAD71B69227D00F2F377 /* FavoriteCardsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7BAAD61B69227D00F2F377 /* FavoriteCardsViewCell.m */; };
 		F7AA7D1EDBBC0ECF221C2A7B /* libPods-150729_ALPHACamp_FinalTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DDDC8332099AC623DEA05C /* libPods-150729_ALPHACamp_FinalTest.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,9 @@
 		4F7BAAC91B68D57F00F2F377 /* FavoriteCards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteCards.m; sourceTree = "<group>"; };
 		4F7BAACB1B68DA1100F2F377 /* CardDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDetail.h; sourceTree = "<group>"; };
 		4F7BAACC1B68DA1100F2F377 /* CardDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDetail.m; sourceTree = "<group>"; };
+		4F7BAAD31B69194900F2F377 /* FavoriteCardsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteCardsCell.xib; sourceTree = "<group>"; };
+		4F7BAAD51B69227D00F2F377 /* FavoriteCardsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteCardsViewCell.h; sourceTree = "<group>"; };
+		4F7BAAD61B69227D00F2F377 /* FavoriteCardsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteCardsViewCell.m; sourceTree = "<group>"; };
 		977774CDE94AF165998BC616 /* Pods-150729_ALPHACamp_FinalTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-150729_ALPHACamp_FinalTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-150729_ALPHACamp_FinalTest/Pods-150729_ALPHACamp_FinalTest.debug.xcconfig"; sourceTree = "<group>"; };
 		CAE0A543815E37A434043902 /* Pods-150729_ALPHACamp_FinalTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-150729_ALPHACamp_FinalTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-150729_ALPHACamp_FinalTest/Pods-150729_ALPHACamp_FinalTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +121,9 @@
 				4F7BAAC51B68D31B00F2F377 /* SingletonObject.h */,
 				4F7BAAC61B68D31B00F2F377 /* SingletonObject.m */,
 				4F7BAABD1B68CB0900F2F377 /* cardView.xib */,
+				4F7BAAD31B69194900F2F377 /* FavoriteCardsCell.xib */,
+				4F7BAAD51B69227D00F2F377 /* FavoriteCardsViewCell.h */,
+				4F7BAAD61B69227D00F2F377 /* FavoriteCardsViewCell.m */,
 				4F7BAABF1B68CC0E00F2F377 /* cardView.h */,
 				4F7BAAC01B68CC0E00F2F377 /* cardView.m */,
 				4F7BAAC21B68CCB200F2F377 /* GV.h */,
@@ -253,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F7BAAD41B69194900F2F377 /* FavoriteCardsCell.xib in Resources */,
 				4F3C962F1B68B30000BFCD70 /* Main.storyboard in Resources */,
 				4F3C96341B68B30000BFCD70 /* LaunchScreen.xib in Resources */,
 				4F7BAABE1B68CB0900F2F377 /* cardView.xib in Resources */,
@@ -314,6 +323,7 @@
 				4F7BAACD1B68DA1100F2F377 /* CardDetail.m in Sources */,
 				4F7BAAC11B68CC0E00F2F377 /* cardView.m in Sources */,
 				4F7BAACA1B68D57F00F2F377 /* FavoriteCards.m in Sources */,
+				4F7BAAD71B69227D00F2F377 /* FavoriteCardsViewCell.m in Sources */,
 				4F3C96261B68B30000BFCD70 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
