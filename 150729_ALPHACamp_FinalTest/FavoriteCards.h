@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol FavoriteCardsDelegate
+- (void)decorateCell: (int)number;
+@end
+
 
 @interface FavoriteCards : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property id<FavoriteCardsDelegate>delegate;
 
 @end

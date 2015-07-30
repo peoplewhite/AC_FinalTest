@@ -35,6 +35,10 @@
                     <constraint firstAttribute="trailingMargin" secondItem="2wO-sN-0fn" secondAttribute="trailing" id="z5d-uL-0gp"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="imgAvatar" destination="AWY-5d-83o" id="3SW-MS-QeS"/>
+                <outlet property="labName" destination="2wO-sN-0fn" id="vvC-wy-OcU"/>
+            </connections>
             <point key="canvasLocation" x="494" y="285"/>
         </tableViewCell>
     </objects>

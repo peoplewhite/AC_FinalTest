@@ -7,6 +7,7 @@
 //
 
 #import "FavoriteCardsViewCell.h"
+#import "SingletonObject.h"
 
 @implementation FavoriteCardsViewCell
 
@@ -18,6 +19,14 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)decorateCell: (int)number {
+    NSLog(@"hi");
+//    SingletonObject *singletonObj = [SingletonObject sharedInstance];
+//    
+//    _imgAvatar.image = singletonObj.arrMyFavoriteCards[number][@"avatar"];
+//    _labName.text = singletonObj.arrMyFavoriteCards[number][@"nickname"];
 }
 
 @end

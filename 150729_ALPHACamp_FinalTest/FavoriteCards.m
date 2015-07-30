@@ -8,6 +8,7 @@
 
 #import "FavoriteCards.h"
 #import "SingletonObject.h"
+#import "FavoriteCardsViewCell.h"
 
 @implementation FavoriteCards
 - (void)viewDidLoad {
@@ -19,9 +20,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    SingletonObject *singletonObj = [SingletonObject sharedInstance];
-    cell.textLabel.text = singletonObj.arrMyFavoriteCards[indexPath.row][@"nickname"];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    FavoriteCardsViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+//    self.delegate = cell;
+//    [self.delegate decorateCell:(int)indexPath.row];
+//    [cell decorateCell:(int)indexPath.row];
+    
+//    cell.textLabel.text = singletonObj.arrMyFavoriteCards[indexPath.row][@"nickname"];
     return cell;
 }
 

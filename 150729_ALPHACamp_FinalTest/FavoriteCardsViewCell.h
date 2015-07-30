@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FavoriteCards.h"
 
-@interface FavoriteCardsViewCell : UITableViewCell
+@interface FavoriteCardsViewCell : UITableViewCell <FavoriteCardsDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *imgAvatar;
+@property (weak, nonatomic) IBOutlet UILabel *labName;
 
 @end
